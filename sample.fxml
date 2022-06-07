@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="myPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="687.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <TableView fx:id="tableView" layoutX="337.0" layoutY="73.0" prefHeight="255.0" prefWidth="327.0">
+        <columns>
+          <TableColumn fx:id="event" prefWidth="115.0" text="Event" />
+          <TableColumn fx:id="time" prefWidth="97.33331298828125" text="Time" />
+            <TableColumn fx:id="location" prefWidth="113.33333333333331" text="Location" />
+        </columns>
+      </TableView>
+      <VBox layoutX="68.0" layoutY="86.0" prefHeight="229.0" prefWidth="200.0" spacing="5.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Event">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Text>
+            <TextField fx:id="nameEvent" promptText="Title" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Text>
+            <DatePicker fx:id="inputTime" prefHeight="25.0" prefWidth="203.0" promptText="mm/dd/yyyy" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtLocation" promptText="kampus" />
+            <Text layoutX="10.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <ColorPicker fx:id="warna" onAction="#gantiColor" prefHeight="25.0" prefWidth="97.0" />
+         </children>
+      </VBox>
+      <Label layoutX="92.0" layoutY="25.0" text="Schedule">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5789473652839661" green="0.33771929144859314" blue="0.33771929144859314" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button layoutX="519.0" layoutY="346.0" mnemonicParsing="false" onAction="#removeCustomer" opacity="0.78" styleClass="free-delivery-card" stylesheets="@../../Pembuatan%20Aplikasi/style.css" text="Remove" />
+      <Button id="sale" layoutX="590.0" layoutY="346.0" mnemonicParsing="false" onAction="#submit" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #58b4ff';" styleClass="search-box" stylesheets="@../../Pembuatan%20Aplikasi/style.css" text="Submit" />
+   </children>
+</AnchorPane>
